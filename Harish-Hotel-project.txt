@@ -1,0 +1,120 @@
+package string;
+import java.util.Scanner;
+public class Hotel {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int cost=0,total=0 ,quantity=0;
+		System.out.println("~~~~~~  Veg menu ~~~~~  ");
+		System.out.println();
+		System.out.println(" items order numbers ");
+		System.out.println("potato Fry   :1  -->(cost=70) " + "     brinjal curry :2 -->(cost=80)");
+		System.out.println("dal curry    :3  -->(cost=100)" + "     sambar curry :4   -->(cost=90) ");
+		System.out.println("veg biryani  :5  -->(cost=70)");
+		System.out.println();
+		System.out.println("~~~~~~ Non Veg menu ~~~~~  ");
+		System.out.println("Chicken biryani   :6 -->(cost=200)" + "     mutton biryani :7 -->(cost=300)");
+		System.out.println("         fish Fry :8 -->(cost=150) " + "        prawns Fry :9 -->(cost=200)");
+		System.out.println("      fish curry  :10-->(cost=250)");
+
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println();
+			System.out.print("Say your :  " +i+ "  order (or) say 'No' to Finish your order: ");
+			String s1=sc.nextLine();
+			
+			
+			
+			if(!s1.equals("no")) 
+			{
+				System.out.print("Enter your order number(1-10): ");
+				int order=sc.nextInt();
+				sc.nextLine();
+				
+				switch(order) 
+				{
+				case 1:
+					System.out.print("Enter the Quantity of potato Fry   : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=70; //potato Fry
+					cost=cost*quantity;
+					break;
+				case 2:
+					System.out.print("Enter the Quantity  of brinjal curry : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=80; //brinjal curry
+					cost=cost*quantity;
+					break;
+				case 3:
+					System.out.print("Enter the Quantity of  dal curry  : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=100; //dal curry
+					cost=cost*quantity;
+					break;
+				case 4:
+					System.out.print("Enter the Quantity  of sambar curry  : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=90; //sambar curry
+					cost=cost*quantity;
+					break;
+				case 5:
+					System.out.print("Enter the Quantity of  veg biryani  : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=70; //veg biryani
+					cost=cost*quantity;
+					break;
+				case 6:
+					System.out.print("Enter the Quantity of   Chicken biryani : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=200; //Chicken biryani
+					cost=cost*quantity;
+					break;
+				case 7:
+					System.out.print("Enter the Quantity  of mutton biryani  : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=300; //mutton biryani
+					cost=cost*quantity;
+					break;
+				case 8:
+					System.out.print("Enter the Quantity of fish Fry  : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=150; //fish Fry
+					cost=cost*quantity;
+					break;
+				case 9:
+					System.out.print("Enter the Quantity of prawns Fry  : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=200; //prawns Fry
+					cost=cost*quantity;
+					break;
+				case 10:
+					System.out.print("Enter the Quantity of  fish curry  : ");
+					quantity=sc.nextInt();
+					sc.nextLine();
+					cost=250; //fish curry
+					cost=cost*quantity;
+					break;
+				}
+				
+			}
+			else {
+				break;
+			}
+			total+=cost;
+		}
+		
+		System.out.println("your total bill Is:" + total);
+		System.out.println("Thanks for visiting sir Come Again:");
+		sc.close();
+	}
+
+}
